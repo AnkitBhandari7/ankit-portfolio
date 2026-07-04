@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -39,32 +41,67 @@ const Navbar = () => {
       ScrollSmoother.refresh(true);
     });
   }, []);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    setIsMenuOpen(false);
+    if (window.innerWidth > 1024) {
+      e.preventDefault();
+      smoother.scrollTo(target, true, "top top");
+    }
+  };
+
   return (
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          RC
+          AB
         </a>
         <a
-          href="mailto:rajeshchittyal21@gmail.com"
+          href="mailto:ankeetbhandari77@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          rajeshchittyal21@gmail.com
+          ankeetbhandari77@gmail.com
         </a>
-        <ul>
+
+        {/* Hamburger Toggle Button */}
+        <button
+          className={`nav-hamburger ${isMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation menu"
+          data-cursor="disable"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Navigation Menu Links */}
+        <ul className={isMenuOpen ? "nav-open" : ""}>
           <li>
-            <a data-href="#about" href="#about">
+            <a
+              data-href="#about"
+              href="#about"
+              onClick={(e) => handleLinkClick(e, "#about")}
+            >
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
+            <a
+              data-href="#work"
+              href="#work"
+              onClick={(e) => handleLinkClick(e, "#work")}
+            >
               <HoverLinks text="WORK" />
             </a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
+            <a
+              data-href="#contact"
+              href="#contact"
+              onClick={(e) => handleLinkClick(e, "#contact")}
+            >
               <HoverLinks text="CONTACT" />
             </a>
           </li>

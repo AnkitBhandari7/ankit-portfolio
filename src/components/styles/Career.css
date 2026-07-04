@@ -63,6 +63,10 @@
   margin: 0;
   font-weight: 500;
   line-height: 45px;
+  width: 320px;
+  text-align: left;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .career-info h4 {
@@ -160,6 +164,7 @@
 
   .career-info h3 {
     font-size: 40px;
+    width: 270px;
   }
 
   .career-info-box p {
@@ -197,6 +202,10 @@
     width: 100%;
     padding-left: 10%;
     box-sizing: border-box;
+  }
+
+  .career-info h3 {
+    width: auto;
   }
 
   .career-timeline {

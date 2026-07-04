@@ -213,53 +213,67 @@
   margin: 0;
 }
 
-.landing-info h2 {
-  margin: 0;
-  margin-top: -20px;
-  margin-left: 20px;
-  font-family: "Geist", sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
-  position: relative;
+.landing-role-line1 {
   display: flex;
-  flex-wrap: nowrap;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  align-items: center;
+  gap: 10px;
 }
 
-.landing-h2-info-1 {
-  position: absolute;
-  top: 0;
+.landing-role-wrapper {
+  overflow: hidden;
+  height: 45px;
+  position: relative;
 }
 
 h2.landing-info-h2 {
   color: #14b8a6;
-  font-size: 42px;
-  width: 120%;
+  font-size: 38px;
   margin: 0;
+  padding: 0;
   font-family: "Geist", sans-serif;
   font-weight: 600;
   position: relative;
-  margin-left: -5px;
+  white-space: nowrap;
+  line-height: 1;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.landing-h2-2 {
-  position: absolute;
-  top: 0;
+h2.landing-developer-text {
+  color: #14b8a6;
+  font-size: 38px;
+  margin: 0;
+  margin-top: -5px;
+  margin-left: 0;
+  padding: 0;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.landing-info-h2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  z-index: 3;
-  background-image: linear-gradient(0deg,
-      var(--backgroundColor) 40%,
-      rgba(0, 0, 0, 0) 110%);
-  top: 0;
-  left: 0;
+.landing-role-track {
+  display: flex;
+  flex-direction: column;
+  animation: roleSlide 3s ease-in-out infinite;
+}
+
+@keyframes roleSlide {
+  0%, 25% {
+    transform: translateY(0);
+  }
+  33%, 58% {
+    transform: translateY(-45px);
+  }
+  66%, 91% {
+    transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media screen and (min-width: 500px) {
@@ -284,13 +298,28 @@ h2.landing-info-h2 {
     line-height: 30px;
   }
 
-  .landing-info h2 {
-    font-size: 35px;
-    line-height: 40px;
+  h2.landing-info-h2 {
+    font-size: 32px;
+    height: 38px;
   }
 
-  h2.landing-info-h2 {
-    font-size: 38px;
+  h2.landing-developer-text {
+    font-size: 32px;
+  }
+
+  .landing-role-wrapper {
+    height: 38px;
+  }
+
+  .landing-role-track {
+    animation-name: roleSlide500;
+  }
+
+  @keyframes roleSlide500 {
+    0%, 25% { transform: translateY(0); }
+    33%, 58% { transform: translateY(-38px); }
+    66%, 91% { transform: translateY(-76px); }
+    100% { transform: translateY(0); }
   }
 }
 
@@ -312,13 +341,28 @@ h2.landing-info-h2 {
     font-size: 25px;
   }
 
-  .landing-info h2 {
+  h2.landing-info-h2 {
     font-size: 45px;
-    line-height: 42px;
+    height: 52px;
   }
 
-  h2.landing-info-h2 {
-    font-size: 55px;
+  h2.landing-developer-text {
+    font-size: 45px;
+  }
+
+  .landing-role-wrapper {
+    height: 52px;
+  }
+
+  .landing-role-track {
+    animation-name: roleSlide768;
+  }
+
+  @keyframes roleSlide768 {
+    0%, 25% { transform: translateY(0); }
+    33%, 58% { transform: translateY(-52px); }
+    66%, 91% { transform: translateY(-104px); }
+    100% { transform: translateY(0); }
   }
 }
 
@@ -386,12 +430,27 @@ h2.landing-info-h2 {
     font-size: 35px;
   }
 
-  .landing-info h2 {
-    font-size: 65px;
-    line-height: 62px;
+  h2.landing-info-h2 {
+    font-size: 60px;
+    height: 68px;
   }
 
-  h2.landing-info-h2 {
-    font-size: 75px;
+  h2.landing-developer-text {
+    font-size: 60px;
+  }
+
+  .landing-role-wrapper {
+    height: 68px;
+  }
+
+  .landing-role-track {
+    animation-name: roleSlide1600;
+  }
+
+  @keyframes roleSlide1600 {
+    0%, 25% { transform: translateY(0); }
+    33%, 58% { transform: translateY(-68px); }
+    66%, 91% { transform: translateY(-136px); }
+    100% { transform: translateY(0); }
   }
 }

@@ -15,43 +15,43 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>Backend Developer Intern</h4>
+                <h5>Swift Technology Pvt. Ltd (IME Group)</h5>
               </div>
-              <h3>2020</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Built and maintained REST APIs using Node.js and Express.js with
+              routing, middleware, and JWT-based authentication. Worked with
+              MySQL (Sequelize ORM) and MongoDB (Mongoose) for database design,
+              migrations, and CRUD operations. Applied TypeScript for type-safe
+              development; documented APIs with Swagger UI.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>BSc (Hons) Computing</h4>
+                <h5>Islington College – London Metropolitan University</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2024</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Currently pursuing BSc (Hons) Computing at Islington College,
+              affiliated with London Metropolitan University, Kathmandu, Nepal.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h4>SLC</h4>
+                <h5>Uniglobe SS/College (NEB)</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2021 – 2023</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Completed SLC from Uniglobe SS/College under the National
+              Examination Board (NEB), Kamaladi, Kathmandu.
             </p>
           </div>
         </div>

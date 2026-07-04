@@ -21,6 +21,12 @@ const imageUrls = [
   "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/Dart_logo.png",
+  "/images/flutter.png",
+  "/images/grpc.jpeg",
+  "/images/panda.png",
+  "/images/sequelize.png",
+  "/images/sklearn.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
