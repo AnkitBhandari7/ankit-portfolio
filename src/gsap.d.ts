@@ -1,4 +1,4 @@
-declare module "gsap-trial/SplitText" {
+declare module "gsap/SplitText" {
   export class SplitText {
     constructor(target: string | string[] | Element | Element[], vars?: Record<string, unknown>);
     chars: HTMLElement[];
@@ -9,7 +9,7 @@ declare module "gsap-trial/SplitText" {
   }
 }
 
-declare module "gsap-trial/ScrollSmoother" {
+declare module "gsap/ScrollSmoother" {
   export class ScrollSmoother {
     static create(vars?: Record<string, unknown>): ScrollSmoother;
     static refresh(hard?: boolean): void;
